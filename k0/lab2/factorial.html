@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+    <h2>Find the Factorial!</h2>
+    <input type="text" id="num">
+
+    <button onclick="fac()">
+        click here
+    </button>
+
+    <script>
+        function fac(){
+            var num,f;
+            f=1;
+            num=document.getElementById("num").value;
+            num=parseInt(num);
+            
+            document.getElementById("print").innerHTML=fact(num).toString();    
+        }
+        function fact(num){
+                if(num==0)
+                return 1;
+                else
+                return num*fact(num-1);
+            }
+    </script>
+    <p id="print"></p>
+</body>
+</html>
